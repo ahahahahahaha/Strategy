@@ -1,0 +1,18 @@
+# import aero_dragon
+# test = env.env(1,0)
+# test.reset()
+# print('reset')
+# test.step(3)
+# print('take off')
+# test.step(8)
+# print('follow')
+import numpy as np
+a = np.array([[1.1,1.2,1.3],[2.1,2.2,2.3]],dtype=np.float32)
+b = np.array([[3.1,3.2,3.3],[4.1,4.2,4.3]],dtype=np.float32)
+c = np.array([[5.1,5.2],[6.1,6.2]],dtype=np.float32)
+d = np.array([[7.1,7.2],[8.1,8.2]],dtype=np.float32)
+t1 = np.concatenate((a,b))
+t2 = np.concatenate((c,d))
+t3 = np.zeros(shape=(4,1))
+e = np.concatenate((t1, t2,t3),axis=1)
+print(e)
